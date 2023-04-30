@@ -1,3 +1,7 @@
+<script setup>
+const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+</script>
+
 <template>
 	<div class="register">
 		<div class="register-container">
@@ -13,13 +17,21 @@
 				<button class="register-cta-btn">Register for launch updates.</button>
 				<p class="register-cta-details">
 					for any question:
-					<a class="register-cta-link">harshit@monofyi.com</a>
+					<a
+						href="mailto:harshit@monofyi.com"
+						class="register-cta-link">
+						harshit@monofyi.com
+					</a>
 				</p>
 			</div>
 		</div>
 		<div class="register-schema">
 			<p>Distributors</p>
-			<div class="register-schema-svg" />
+			<img
+				class="register-schema-svg"
+				:src="'assets/schema_' + (dark_mode ? 'dark' : 'light') + '.webp'"
+				alt="schema"
+			/>
 			<p>Buyers</p>
 		</div>
 	</div>
@@ -30,6 +42,7 @@
 .register {
 	padding: 0 160px;
 	display: flex;
+	justify-content: space-between;
 	gap: 120px;
 
 	&-container {
@@ -65,6 +78,7 @@
 
 			padding: 42px 95px;
 			background: var(--btn-bg);
+			color: var(--btn-text);
 
 			border: 0;
 			border-radius: 5em;
@@ -89,8 +103,6 @@
 		&-svg {
 			height: 495px;
 			aspect-ratio: 1/1;
-
-			background: green;
 		}
 	}
 }
