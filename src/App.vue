@@ -15,25 +15,38 @@ import { RouterView } from 'vue-router'
 
 	--palette-dark-grey: #434343;
 	--palette-grey: #828282;
+}
 
+:root {
 	--bg-dark-mode: var(--palette-dark-blue);
 	--bg-light-mode: var(--palette-white);
 
 	--text-title-dark-mode: var(--palette-white);
 	--text-title-light-mode: var(--palette-grey);
 
+	--btn-bg-light-mode: var(--palette-dark-blue);
+	--btn-text-light-mode: var(--palette-white);
+
+	--btn-bg-dark-mode: var(--palette-white);
+	--btn-text-dark-mode: var(--palette-dark-blue);
+
 	--text-secondary: var(--palette-grey);
 	--accent: var(--palette-orange);
 
+	--bg: var(--bg-light-mode);
+	--text-title: var(--text-title-light-mode);
 
-	@media (prefers-color-scheme: dark) {
-		--text-title: var(--text-title-dark-mode);
+	--btn-bg: var(--btn-bg-light-mode);
+	--btn-text: var(--btn-text-light-mode);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
 		--bg: var(--bg-dark-mode);
-	}
+		--text-title: var(--text-title-dark-mode);
 
-	@media (prefers-color-scheme: light) {
-		--text-title: var(--text-title-light-mode);
-		--bg: var(--bg-light-mode);
+		--btn-bg: var(--btn-bg-dark-mode);
+		--btn-text: var(--btn-text-dark-mode);
 	}
 }
 
