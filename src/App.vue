@@ -40,6 +40,24 @@ import { RouterView } from 'vue-router'
 body {
 	color: var(--text-secondary);
 	background: var(--bg);
+
+	font-family: 'Alata', sans-serif;
+	font-size: 28px;
+
+	box-sizing: border-box;
+	height: 100vh;
+	padding: 2em;
+	margin: 0;
+}
+
+#app {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	align-content: space-between;
+	justify-content: space-between;
 }
 
 </style>
