@@ -1,5 +1,5 @@
 <script setup>
-const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+defineProps(["dark_mode"]);
 </script>
 
 <template>
@@ -29,6 +29,7 @@ const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 			<p>Distributors</p>
 			<img
 				class="register-schema-svg"
+				:key="dark_mode"
 				:src="'assets/schema_' + (dark_mode ? 'dark' : 'light') + '.webp'"
 				alt="schema"
 			/>

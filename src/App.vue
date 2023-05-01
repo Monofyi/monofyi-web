@@ -50,6 +50,24 @@ import { RouterView } from 'vue-router'
 	}
 }
 
+:root.theme {
+	&-dark {
+		--bg: var(--bg-dark-mode);
+		--text-title: var(--text-title-dark-mode);
+
+		--btn-bg: var(--btn-bg-dark-mode);
+		--btn-text: var(--btn-text-dark-mode);
+	}
+
+	&-light {
+		--bg: var(--bg-light-mode);
+		--text-title: var(--text-title-light-mode);
+
+		--btn-bg: var(--btn-bg-light-mode);
+		--btn-text: var(--btn-text-light-mode);
+	}
+}
+
 body {
 	color: var(--text-secondary);
 	background: var(--bg);
