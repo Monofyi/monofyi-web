@@ -1,6 +1,7 @@
 <script setup>
 import TheRegister from '@/components/TheRegister.vue'
 import { reactive } from 'vue'
+import TheHeader from "@/components/TheHeader.vue";
 
 const state = reactive({
   dark_mode:
@@ -17,17 +18,10 @@ function toggle_theme() {
 	console.log(`Switched ${theme} theme!`);
 	document.documentElement.className = `theme-${theme}`;
 }
-
 </script>
 
 <template>
-	<header>
-		<RouterLink class="title" to="/">Monofyi</RouterLink>
-		<div id="theme-btn" :key="state.dark_mode" @click="toggle_theme()">
-			<img v-if="state.dark_mode" src="assets/sun.svg" alt="Toggle light theme">
-			<img v-else src="assets/moon.svg" alt="Toggle dark theme">
-		</div>
-	</header>
+	<TheHeader :toggler="toggle_theme" :dark_mode="state.dark_mode" />
   <main>
     <TheRegister :key="state.dark_mode" :dark_mode="state.dark_mode" />
   </main>
