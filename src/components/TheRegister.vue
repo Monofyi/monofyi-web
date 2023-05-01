@@ -40,27 +40,27 @@ const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 <style lang="scss">
 
 .register {
-	padding: 0 160px;
+	padding: 0 7em;
 	display: flex;
 	justify-content: space-between;
-	gap: 120px;
+	gap: 5em;
 
 	&-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 55px;
+		gap: 2em;
 
 		&-title {
 			margin: 0;
 			font-family: 'Alata', sans-serif;
-			font-size: 48px;
+			font-size: 2em;
 		}
 
 		&-description {
 			margin: 0;
 			color: var(--text-secondary);
-			line-height: 100%;
+			line-height: 120%;
 		}
 	}
 
@@ -74,9 +74,9 @@ const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 		&-btn {
 			font-family: 'Alata', sans-serif;
-			font-size: 32px;
+			font-size: 1em;
 
-			padding: 42px 95px;
+			padding: 1em 2em;
 			background: var(--btn-bg);
 			color: var(--btn-text);
 
@@ -86,7 +86,7 @@ const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 		&-details {
 			font-family: 'Alata', sans-serif;
-			font-size: 20px;
+			font-size: .6em;
 		}
 
 		&-link {
@@ -101,9 +101,31 @@ const dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 		align-items: center;
 
 		&-svg {
-			height: 495px;
+			height: clamp(320px, 30vw, 495px);
 			aspect-ratio: 1/1;
 		}
+	}
+}
+
+@media screen and (max-width: 1064px) {
+	body {
+		padding: 1em;
+	}
+
+	.register {
+		padding: 0 2em;
+		gap: 3em;
+
+		&-container-title {
+			font-size: 1.8em;
+		}
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.register {
+		flex-direction: column;
+		padding: 0;
 	}
 }
 

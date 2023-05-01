@@ -34,7 +34,7 @@ import TheWelcome from '@/components/TheRegister.vue'
 }
 
 .agreement {
-	font-size: 20px;
+	font-size: .6em;
 	margin: 0;
 
 	& > a {

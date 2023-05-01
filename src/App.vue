@@ -55,7 +55,7 @@ body {
 	background: var(--bg);
 
 	font-family: 'Alata', sans-serif;
-	font-size: 28px;
+	font-size: clamp(16px, 1.5vw, 26px);
 
 	box-sizing: border-box;
 	height: 100vh;
