@@ -102,7 +102,7 @@ defineProps(["dark_mode"]);
 		align-items: center;
 
 		&-svg {
-			height: clamp(320px, 30vw, 495px);
+			height: clamp(280px, 30vw, 495px);
 			aspect-ratio: 1/1;
 		}
 	}
@@ -127,6 +127,10 @@ defineProps(["dark_mode"]);
 	.register {
 		flex-direction: column;
 		padding: 0;
+
+		&-cta {
+			width: auto;
+		}
 	}
 }
 

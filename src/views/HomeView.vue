@@ -43,17 +43,6 @@ function toggle_theme() {
 
 <style lang="scss">
 
-header {
-	display: flex;
-	justify-content: space-between;
-}
-
-.title {
-	color: var(--accent);
-	font-family: 'Righteous', cursive;
-	text-decoration: none;
-}
-
 .agreement {
 	font-size: .6em;
 	margin: 0;
@@ -63,13 +52,4 @@ header {
 	}
 }
 
-#theme-btn {
-	display: flex;
-	cursor: pointer;
-
-	img {
-		width: 1em;
-		height: 1em;
-	}
-}
 </style>

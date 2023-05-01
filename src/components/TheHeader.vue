@@ -11,3 +11,28 @@ defineProps(["toggler", "dark_mode"]);
 		</div>
 	</header>
 </template>
+
+<style lang="scss">
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	color: var(--accent);
+	font-family: 'Righteous', cursive;
+	text-decoration: none;
+}
+
+#theme-btn {
+	display: flex;
+	cursor: pointer;
+
+	img {
+		width: 1.2em;
+		height: 1.2em;
+	}
+}
+</style>
